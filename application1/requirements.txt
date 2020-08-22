@@ -1,0 +1,7 @@
+Flask==1.1.1
+requests
+werkzeug==0.16.1
+flask-testing
+pytest-cov
+pymysql
+flask_sqlalchemy

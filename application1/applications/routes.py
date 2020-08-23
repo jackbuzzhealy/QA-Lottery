@@ -7,13 +7,13 @@ import requests
 def home():
     return render_template('home.html')
 
-@app.route('/lighteningBall', methods=['GET', 'POST'])
+@app.route('/generateLighteningBall', methods=['GET', 'POST'])
 def generateLighteningBall():
     myLigteningBall = requests.get('http://app2:5001/getMyLighteningBall')
     winningLighteningBall = requests.post('http://app2:5001/postMyLighteningBall', data=myLigteningBall.number)
     return render_template('lightening-ball-result.html', myLigteningBall=myLigteningBall.number, winningLighteningBall=winningLighteningBall.number)
 
-@app.route('/lottery', methods=['GET', 'POST'])
+@app.route('/generateLotteryNumbers', methods=['GET', 'POST'])
 def generateLotteryNumbers():
     myLotteryNumber = requests.get('http://app2:5001/getMyLighteningBall')
     winningLotteryNumbers = requests.post('http://app2:5001/postMyLighteningBall', data=myLotteryNumber.number)

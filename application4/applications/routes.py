@@ -6,6 +6,13 @@ from random import randint
 def postMyLighteningBall():
     myLighteningBall = request.data.decode('utf-8')
     winningLighteningBall = random.randint(1,14)
+
+    match = bool 
+    if myLighteningBall == winningLighteningBall:
+        match = True
+    else:
+        match = False
+
     return Response(winningLighteningBall, mimetype='text/plain')
 
 @app.route('/postMyLotteryNumbers', methods=['POST'])
@@ -17,5 +24,11 @@ def postMyLotteryNumbers():
         numbers.append(random.randint(1,50)
         count = count + 1
     
+    matches = int
+    for ball in myLotteryNumbers:
+        if ball in numbers:
+            match = match + 1
+
     winningLotteryNumbers = " ".join(numbers)
+    
     return Response(winningLotteryNumbers, mimetype='text/plain')

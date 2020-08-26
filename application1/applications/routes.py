@@ -9,12 +9,12 @@ def home():
 
 @app.route('/generateLotteryNumbers', methods=['GET', 'POST'])
 def generateLighteningBall():
-    myLigteningBall = requests.get('http://app2:5001/getMyLotteryNumbers')
-    winningLighteningBall = requests.post('http://app2:5003/postMyLotteryNumbers', data=myLigteningBall.number)
-    return render_template('lightening-ball-result.html', myLigteningBall=myLigteningBall.number, winningLighteningBall=winningLighteningBall.text)
+    myLighteningBall = requests.get('http://app2:5001/getMyLotteryNumbers')
+    winningLighteningBall = requests.post('http://app4:5003/postMyLotteryNumbers', data=myLighteningBall.text)
+    return render_template('lightening-ball-result.html', myLighteningBall=myLighteningBall.text, winningLighteningBall=winningLighteningBall.text)
 
 @app.route('/generateLighteningBall', methods=['GET', 'POST'])
 def generateLotteryNumbers():
-    myLotteryNumber = requests.get('http://app2:5002/getMyLighteningBall')
-    winningLotteryNumbers = requests.post('http://app2:5003/postMyLighteningBall', data=myLotteryNumber.number)
-    return render_template('lottery-result.html', myLotteryNumber=myLotteryNumber.number, winningLotteryNumbers=winningLotteryNumbers.text)
+    myLotteryNumbers = requests.get('http://app3:5002/getMyLighteningBall')
+    winningLotteryNumbers = requests.post('http://app4:5003/postMyLighteningBall', data=myLotteryNumbers.text)
+    return render_template('lottery-result.html', myLotteryNumbers=myLotteryNumbers.text, winningLotteryNumbers=winningLotteryNumbers.text)

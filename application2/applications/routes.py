@@ -10,7 +10,7 @@ def getMyLotteryNumbers():
         ball = randint(1,50)
         if ball not in myNumbers:
             myNumbers.append(ball)
-            count1 += 1
+            count += 1
     list_string = map(str, myNumbers)
     myLotteryNumbers = " ".join(list_string)
     return Response(myLotteryNumbers, mimetype="text/plain")

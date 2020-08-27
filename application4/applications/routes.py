@@ -15,7 +15,7 @@ def postMyLighteningBall():
     else:
         match = False
 
-    return jsonify({winningLighteningBall : match})
+    return jsonify({"winningBall":winningLighteningBall, "match" : match})
 
 @app.route('/postMyLotteryNumbers', methods=['POST'])
 def postMyLotteryNumbers():
@@ -37,4 +37,4 @@ def postMyLotteryNumbers():
     for ball in myLotteryNumbers:
         if ball in winningNumbers:
             matches = matches + 1    
-    return jsonify({winningLotteryNumbers : matches}) 
+    return jsonify({"winningBalls":winningLotteryNumbers, "matches":matches}) 

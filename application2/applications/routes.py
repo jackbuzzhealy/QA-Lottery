@@ -4,12 +4,13 @@ from random import randint
 
 @app.route('/getMyLotteryNumbers', methods=['GET'])
 def getMyLotteryNumbers():
-    count = 1
-    numbers = []
+    count = 0
+    myNumbers = []
     while count != 6:
-        numbers.append(random.randint(1,50)
-        count = count + 1
-
-    myLotteryNumbers = " ".join(numbers)
-
+        ball = randint(1,50)
+        if ball not in myNumbers:
+            myNumbers.append(ball)
+            count += 1
+    list_string = map(str, myNumbers)
+    myLotteryNumbers = " ".join(list_string)
     return Response(myLotteryNumbers, mimetype="text/plain")

@@ -1,11 +1,8 @@
-<html>
-  <title>Result</title>
-
+{% extends 'layout.html' %}
   {% block body_content %}
     <div>
-      <h1>Your Ball: {{lightening_ball}}</h1>
-      <h1>Winning Ball: {{winning_lightening_ball}}</h1>
+      <h1>Your Ball: {{myLighteningBall}}</h1>
+      <h1>Winning Ball: {{winningLighteningBall}}</h1>
       <h1>Prize £{{prize}}</h1>
     </div>
   {% endblock %}
-</html>

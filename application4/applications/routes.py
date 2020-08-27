@@ -6,16 +6,15 @@ from random import randint
 def postMyLighteningBall():
     post = request.data.decode('utf-8')
     myLighteningBall = int(post)
-
-    winningLighteningBall = random.randint(1,14)
+    app.logger.info(myLighteningBall)
+    winningLighteningBall = randint(1,14)
 
     match = False
     if myLighteningBall == winningLighteningBall:
         match = True
     else:
         match = False
-
-    return jsonify({"winningBall":winningLighteningBall, "match" : match})
+    return jsonify({"winningBall":winningLighteningBall, "match":match})
 
 @app.route('/postMyLotteryNumbers', methods=['POST'])
 def postMyLotteryNumbers():

@@ -13,12 +13,10 @@ def generateLotteryNumbers():
     myLotteryNumbers = requests.get('http://app2:5001/getMyLotteryNumbers')
     response = requests.post('http://app4:5003/postMyLotteryNumbers', data=myLotteryNumbers.text)
     
-    #get json TODO
     winnings = response.json()
     winningLotteryNumbers = winnings["winningBalls"]
     matches = winnings["matches"]
 
-    #database prize
     qry = Prizes.query.filter_by(no_of_balls=matches).first()
     prize = 0
     if qry is None:
@@ -34,9 +32,17 @@ def generateLotteryNumbers():
 @app.route('/generateLighteningBall', methods=['GET', 'POST'])
 def generateLighteningBall():
     myLighteningBall = requests.get('http://app3:5002/getMyLighteningBall')
+    app.logger.info(myLighteningBall.text)
     response = requests.post('http://app4:5003/postMyLighteningBall', data=myLighteningBall.text)
+    app.logger.info(response)
+    
+    winnings = response.json()
+    winningLighteningBall = winnings["winningBall"]
+    matches = winnings["match"]
 
-    #get boolean expression
-    #database prize
+    prize = 0
+    if matches == True:
+        qry = Prizes.query.filter_by(lightening_ball="yes").first()
+        prize = qry.prize_value
 
-    return render_template('lightening-ball-result.html', myLighteningBall=myLighteningBall.text, winningLighteningBall=winningLighteningBall.text)
+    return render_template('lightening-ball-result.html', myLighteningBall=myLighteningBall.text, prize=prize, winningLighteningBall=winningLighteningBall)

@@ -1,13 +1,13 @@
 from applications import app
 from flask import Response, request, jsonify
-from random import randint
+import random
 
 @app.route('/postMyLighteningBall', methods=['POST'])
 def postMyLighteningBall():
     post = request.data.decode('utf-8')
     myLighteningBall = int(post)
     app.logger.info(myLighteningBall)
-    winningLighteningBall = randint(1,14)
+    winningLighteningBall = random.randint(1,14)
 
     match = False
     if myLighteningBall == winningLighteningBall:
@@ -25,7 +25,7 @@ def postMyLotteryNumbers():
     count = 0
     winningNumbers = []
     while count != 6:
-        ball = randint(1,50)
+        ball = random.randint(1,50)
         if ball not in winningNumbers:
             winningNumbers.append(ball)
             count += 1

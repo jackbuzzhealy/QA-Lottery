@@ -34,7 +34,6 @@ def generateLighteningBall():
     myLighteningBall = requests.get('http://app3:5002/getMyLighteningBall')
     app.logger.info(myLighteningBall.text)
     response = requests.post('http://app4:5003/postMyLighteningBall', data=myLighteningBall.text)
-    app.logger.info(response)
     
     winnings = response.json()
     winningLighteningBall = winnings["winningBall"]

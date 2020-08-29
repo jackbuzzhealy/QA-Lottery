@@ -116,7 +116,7 @@ class TestViews(TestBase):
 
         with patch('requests.get') as g:
             with patch('requests.post') as p:
-                g.return_value.text = "12 32 21 49 6"
+                g.return_value.text = "12 32 21 49 6 29"
                 p.return_value.text.json.return_value = fake_json
 
                 response = self.client.get(url_for('generateLotteryNumbers'))
@@ -127,10 +127,10 @@ class TestViews(TestBase):
         """
         Testing if the lightening ball page gives prize
         """
-        fake_json = [{"winningBalls": "1 2 3 4 5", "matches": 6}]
+        fake_json = [{"winningBalls": "1 2 3 4 5 6", "matches": 6}]
         with patch('requests.get') as g:
             with patch('requests.post') as p:
-                g.return_value.text = "1 2 3 4 5"
+                g.return_value.text = "1 2 3 4 5 6"
                 p.return_value.text.json.return_value = fake_json
                 
                 stringMyNumbers = list(g.return_value.text.split(" "))

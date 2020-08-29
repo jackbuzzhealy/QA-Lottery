@@ -2,6 +2,7 @@ from applications import app
 from flask import Response, request, jsonify
 import random 
 
+
 @app.route('/postMyLighteningBall', methods=['POST'])
 def postMyLighteningBall():
     post = request.data.decode('utf-8')

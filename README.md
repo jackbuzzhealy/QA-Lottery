@@ -1,4 +1,4 @@
-QA-Lottery
+﻿QA-Lottery
 
 This README.md file contains all the relevant information regarding my project up to the ninth week at the QA Consulting Academy.
 Links:
@@ -12,23 +12,24 @@ http://35.246.120.114/ (Manager Node)
 http://34.105.216.178/ (Worker Node)
 
 Contents
-•	Requirements
-•	Architecture
-•	Project Tracking 
-•	Testing
-•	Risk Assessment
-•	Known Issues 
-•	Future Improvements
+• Requirements
+• Architecture
+• Project Tracking 
+• Testing
+• Risk Assessment
+• Known Issues 
+• Future Improvements
 
 Requirements
 
 The purpose of this assignment was to create API service applications with utilisation of supporting tools, methodologies and technologies that encapsulate all core modules covered during training.  These applications must make http GET and POST requests to communicate data to each other.  The following technologies were used.
-•	A Kanban board (using Jira)
-•	Clear documentation of the design phase, app architecture and risk assessment
-•	A python-based functional application that follows best practices and design principles
-•	Test suites for the application, which will include automated tests for validation of the application
-•	A front-end website, created using Flask
-•	Code integrated into a Version Control System (GitHub) which will be built through a CI server (Jenkins) and deployed (via Docker Swarm) to a cloud-based virtual machine (GCP)
+• A Kanban board (using Jira)
+• Clear documentation of the design phase, app architecture and risk assessment
+• A python-based functional application that follows best practices and design principles
+• Test suites for the application, which will include automated tests for validation of the application
+• A front-end website, created using Flask
+• Code integrated into a Version Control System (GitHub) which will be built through a CI server (Jenkins) and deployed (via Docker Swarm) to a cloud-based virtual machine (GCP)
+
 ![MoSCoW]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/MOSCOW.PNG)
 
 Architecture
@@ -53,17 +54,46 @@ Hyperlink showing the full Kanban board is at the top of this file, but screensh
 
 Testing
 
+Service 1
+
+Tested if all the numbers appeared on the correct HTML forms and the correct prizes are shown
+
+![service1]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/service1.PNG)
+
+Service 2
+
+Tested if the Lottery Numbers were generated
+
+![service2]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/service2.PNG)
+
+Service 3
+
+Tested if the Lightening Ball Number was generated
+
+![service3]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/service3.PNG)
+
+Service 4
+
+Tested if both the Lightening Ball and Lottery numbers where posted to the service.  Also tested if the winning numbers were generated and sent back to service 1
+
+![service4]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/service4.PNG)
+
+
 Risk Assessment 
 
 ![RiskAssessment]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/Risk-Assessment.PNG)
 
 Known Issues 
 
+• Docker Swarm Stack would not build properly
+• In Service 1, the unit tests that test the winning Lottery Numbers do not work
+• Integration Tests do not work
+
 Improvements which I would like to make include:
 
-•	Docker Swarm to work properly so that the applications can be deployed robustly
+• Docker Swarm to work properly so that the applications can be deployed robustly
 
-•	To add some CSS to improve the usability 
+• To add some CSS to improve the usability 
 
 Authors
 

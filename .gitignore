@@ -3,3 +3,4 @@
 /venv
 *.pyc
 /htmlcov
+*.coverage

@@ -5,3 +5,4 @@ flask-testing
 pytest-cov
 pymysql
 flask_sqlalchemy
+selenium==3.141.0

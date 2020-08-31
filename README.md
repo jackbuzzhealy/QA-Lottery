@@ -71,7 +71,7 @@ Service 3
 
 Tested if the Lightening Ball Number was generated
 
-![service3]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/TestingImages/service3.PNG
+![service3]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/TestingImages/service3.PNG)
 
 Service 4
 

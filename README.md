@@ -48,6 +48,7 @@ Pictured below is the continuous integration pipeline with the associated framew
 
 Project Tracking 
 Hyperlink showing the full Kanban board is at the top of this file, but screenshots is provided below to show the progress of the project.
+
 ![progress1]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/JiraProgress/progress1.PNG)
 ![progress2]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/JiraProgress/progress2.PNG)
 ![ progress3]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/JiraProgress/progress3.PNG)
@@ -58,25 +59,25 @@ Service 1
 
 Tested if all the numbers appeared on the correct HTML forms and the correct prizes are shown
 
-![service1]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/service1.PNG)
+![service1]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/TestingImages/service1.PNG)
 
 Service 2
 
 Tested if the Lottery Numbers were generated
 
-![service2]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/service2.PNG)
+![service2]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/TestingImages/service2.PNG)
 
 Service 3
 
 Tested if the Lightening Ball Number was generated
 
-![service3]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/service3.PNG)
+![service3]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/TestingImages/service3.PNG
 
 Service 4
 
 Tested if both the Lightening Ball and Lottery numbers where posted to the service.  Also tested if the winning numbers were generated and sent back to service 1
 
-![service4]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/service4.PNG)
+![service4]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/TestingImages/service4.PNG)
 
 
 Risk Assessment 

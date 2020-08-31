@@ -54,6 +54,7 @@ Hyperlink showing the full Kanban board is at the top of this file, but screensh
 Testing
 
 Risk Assessment 
+
 ![RiskAssessment]( https://github.com/jackbuzzhealy/QA-Lottery/blob/master/DesignImages/Risk-Assessment.PNG)
 Known Issues 
 Improvements which I would like to make include
@@ -61,4 +62,5 @@ Improvements which I would like to make include
 •	To add some CSS to improve the usability 
 
 Authors
+
 Jack Healy

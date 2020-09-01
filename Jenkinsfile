@@ -15,19 +15,19 @@ pipeline{
                 }
 	    stage('test service 2'){
                 steps{
-                    sh './scripts/test-service-2.sh
+                    sh './scripts/test-service-2.sh'
                 }
 	    stage('test service 3'){
                 steps{
-                    sh './scripts/test-service-3.sh
+                    sh './scripts/test-service-3.sh'
                 }
 	    stage('test service 4'){
                 steps{
-                    sh './scripts/test-service-4.sh
+                    sh './scripts/test-service-4.sh'
                 }
 	    stage('deploy'){
                 steps{
-                    sh './scripts/deploy.sh
+                    sh './scripts/deploy.sh'
                 }
             }
         }    

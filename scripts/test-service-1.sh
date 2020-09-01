@@ -1,2 +1,2 @@
 cd QA-Lottery/application1
-sudo pytest --cov applications
+python3 pytest --cov applications

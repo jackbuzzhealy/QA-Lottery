@@ -1,2 +1,3 @@
 cd QA-Lottery/application1
-python3 pytest --cov applications
+pip3 install pytest
+pytest --cov applications

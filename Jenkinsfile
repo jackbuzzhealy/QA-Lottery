@@ -11,6 +11,11 @@ pipeline{
                     sh './scripts/install-docker.sh'
                 }
 	    }
+	    stage('deploy'){
+                steps{
+                    sh './scripts/deploy.sh'
+                }
+            }
             stage('test service 1'){
                 steps{
                     sh './scripts/test-service-1.sh'
@@ -31,10 +36,5 @@ pipeline{
                     sh './scripts/test-service-4.sh'
                 }
 	    }
-	    stage('deploy'){
-                steps{
-                    sh './scripts/deploy.sh'
-                }
-            }
         }    
 }
